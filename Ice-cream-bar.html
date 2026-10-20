@@ -18,25 +18,90 @@
        <h2>    </h2>
    </header>
    <div x-data="webApp">
+    <!---This is for the container.-->
+   <label> <span>Select your favorite type of container: </span>
+  <input type="radio" name="container" value="container[0]" x-model="radioChoice"> Cone
+  </label>
+    <label>
+  <input type="radio" name="container" value="container[1]" x-model="radioChoice"> Tub
+  </label>
+    <label>
+  <input type="radio" name="container" value="container[2]" x-model="radioChoice"> Cup
+  </label>
+    <label>
+  <input type="radio" name="container" value="container[3]" x-model="radioChoice"> Waffle Cone
+  </label>
    <label>
-  <input type="radio" name="container" container[0] x-model="radioChoice"> Cone
+  <input type="radio" name="container" value="container[4]" x-model="radioChoice">  Banana Split
   </label>
-    <label>
-  <input type="radio" name="container" container[1] x-model="radioChoice"> Tub
-  </label>
-    <label>
-  <input type="radio" name="container" container[2] x-model="radioChoice"> Cup
-  </label>
-    <label>
-  <input type="radio" name="container" container[3] x-model="radioChoice"> Waffle Cone
+</div>
+<div>
+  <!--This is for the flavors.-->
+    <label><span>Select your ice cream flavors: </span>
+  <input type="checkbox" x-model="flavors[0]" > Chocolate
   </label>
    <label>
-  <input type="radio" name="container" container[4] x-model="radioChoice">  Banana Split
+  <input type="checkbox" x-model="flavors[1]" > Vanilla
   </label>
-
-    
-   </div>
-  
+ <label>
+  <input type="checkbox" x-model="flavors[2]" > Coffee
+  </label>
+   <label>
+  <input type="checkbox" x-model="flavors[3]" > Mint Chip
+  </label>
+     <label>
+  <input type="checkbox" x-model="flavors[4]" > Caramel
+  </label>
+   <label>
+  <input type="checkbox" x-model="flavors[5]" > Cookie Dough
+  </label>
+   <label>
+  <input type="checkbox" x-model="flavors[6]" > Cookies N Cream
+  </label>
+  <label>
+  <input type="checkbox" x-model="flavors[7]" > Strawberry
+  </label>
+  <label>
+  <input type="checkbox" x-model="flavors[8]" > Pistachio
+  </label>
+  <label>
+  <input type="checkbox" x-model="flavors[9]" > Rocky Road
+  </label>
+</div>
+<div>
+  <!--This is for the toppings.-->
+    <label> <span>Select your favorite toppings: </span>
+  <input type="checkbox" x-model="toppings[0]" > Whipped Cream
+  </label>
+   <label>
+  <input type="checkbox" x-model="toppings[1]" > Cherries
+  </label>
+ <label>
+  <input type="checkbox" x-model="toppings[2]"> Sprinkles
+  </label>
+   <label>
+  <input type="checkbox" x-model="toppings[3]" >  M&M's
+  </label>
+     <label>
+  <input type="checkbox" x-model="toppings[4]" > Hot Fudge
+  </label>
+   <label>
+  <input type="checkbox" x-model="toppings[5]" >  Mini Peanut Butter Cups
+  </label>
+   <label>
+  <input type="checkbox" x-model="toppings[6]" > Crushed Oreos
+  </label>
+  <label>
+  <input type="checkbox" x-model="toppings[7]" > Brownie Bites
+  </label>
+  <label>
+  <input type="checkbox" x-model="toppings[8]" > Mini Marshmallows
+  </label>
+  <label>
+  <input type="checkbox" x-model="toppings[9]" > Chocolate Chips 
+  </label>
+</div>
+  <button @click="clickButton()">Generate Your Dream Ice Cream!</button>
    <footer>
        <p>© 2026-2027<br>
        AP Computer Science Principles<br>
@@ -47,8 +112,13 @@
        //The script section contains the JavaScript logic
        document.addEventListener('alpine:init', () => {
            Alpine.data('webApp', () => ({
-            container: ["Cone", "Tub", "Cup", "Waffle Cone", "Banana Split"]   
-
+            container: ["Cone", "Tub", "Cup", "Waffle Cone", "Banana Split"]  , 
+            flavors: ["Chocolate", "Vanilla", "Coffee", "Mint Chip", "Caramel", "Cookie Dough", "Cookies N Cream","Strawberry", "Pistachio", "Rocky Road" ]
+            toppings["Whipped Cream", "Cherries", "Sprinkles", "M&M's","Hot Fudge","Mini Peanut Butter Cups","Crushed Oreos","Brownie Bites","Mini Marshmallows","Chocolate Chips"]
+            radioChoice: "",
+            clickButton() {
+              
+            }
 
 
 
